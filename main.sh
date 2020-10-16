@@ -27,6 +27,14 @@ else
   echo "   [-] Dirsearch already exists"
 fi
 
+if [ ! -d "$dir/payload_generator" ];then
+  echo "   [+] Cloneing Payload Generator"
+  git clone https://github.com/Cyb3rR3ap3r/payload_generator.git 2>/dev/null
+  chmod +x $dir/vuln_scan_9001/scanner.py
+else
+  echo "   [-] Payload Generator already exists"
+fi
+
 
 
 echo ""
